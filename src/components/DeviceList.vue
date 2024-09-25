@@ -12,6 +12,8 @@
       <tr>
         <th>ID</th>
         <th>Model</th>
+        <th>制造商</th>
+        <th>产品名称</th>
         <th>类型</th>
         <th>版本</th>
         <th>配置内容</th>
@@ -25,6 +27,8 @@
       <tr v-for="device in paginatedDevices" :key="device.id">
         <td>{{ device.id }}</td>
         <td>{{ device.model }}</td>
+        <td>{{ device.manufacturer }}</td>
+        <td>{{ device.product_name }}</td>
         <td>{{ device.type }}</td>
         <td>{{ device.version }}</td>
         <td>

@@ -24,7 +24,7 @@ export default {
 
     // 当路由发生变化时，检查是否在登录页
     const checkLoginPage = () => {
-      isLoginPage.value = route.name === 'login';
+      isLoginPage.value = route.name === 'login' || route.path === '/';
     };
 
     // 监听页面变化

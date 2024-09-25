@@ -10,6 +10,16 @@
       </div>
       <div class="form-group-row">
         <div class="form-group">
+          <label for="version">产品名称:</label>
+          <input type="text" id="version" v-model="formData.product_name" required />
+        </div>
+        <div class="form-group">
+          <label for="init_address">制造商:</label>
+          <input type="text" id="init_address" v-model="formData.manufacturer" required />
+        </div>
+      </div>
+      <div class="form-group-row">
+        <div class="form-group">
           <label for="version">版本:</label>
           <input type="text" id="version" v-model="formData.version" required />
         </div>
@@ -46,7 +56,8 @@ export default {
       isEdit: false,
       formData: {
         model: '',
-        type: null,
+        product_name:'',
+        manufacturer:'',
         version: '',
         content: '',
         init_address: ''
@@ -94,6 +105,8 @@ export default {
           version: this.formData.version,
           content: contentJSON,
           init_address: this.formData.init_address,
+          product_name: this.formData.product_name,
+          manufacturer: this.formData.manufacturer,
         }
         if (this.isEdit){
           params.id = this.id
